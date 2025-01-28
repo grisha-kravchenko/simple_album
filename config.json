@@ -1,0 +1,5 @@
+{
+    "src": "./src", // source folder, have to start with ./
+    "dist": "./dist", // destination folder, have to start with ./
+    "images": "images" // images are located at src folder
+}
