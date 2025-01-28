@@ -2,4 +2,6 @@
     "src": "./src", // source folder, have to start with ./
     "dist": "./dist", // destination folder, have to start with ./
     "images": "images" // images are located at src folder
+    // "scheme": ["{{images ", "}}"] // scheme of the html tag, which will be replaced with images
+    // default is ["<album>", "</album>"]
 }

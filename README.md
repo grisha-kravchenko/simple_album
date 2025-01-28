@@ -1,2 +1,2 @@
 # Simple library script for gulp
-This code adds simple tag <album></album>, which allows to parse image folders to html. Main code is located at index.js, gulpfile.js contains extra code specific for gulp. File config.json contains all configurations for both index.js and gulpfile.js. ./src/test.html is example of usage. Use gulp command to compile html file.
+This code adds simple tag <album></album>, which allows to parse image folders to html. Main code is located at index.js, gulpfile.js contains extra code specific for gulp. File config.json contains all configurations for both index.js and gulpfile.js. ./src/test.html is example of usage. Use gulp command to compile html file. Uses through2

@@ -1,6 +1,8 @@
 const through = require('through2');
 const fs = require('fs');
 const config = require('./config.json');
+const scheme = config.scheme || ["<album>", "</album>"];
+
 const processHtml = () => {
   // start by executing all fs commands
   const checkImage = path => path.endsWith('.png') || path.endsWith('.jpg') || path.endsWith('.jpeg');
@@ -14,7 +16,7 @@ const processHtml = () => {
     let content = file.contents.toString();
 
     // replace all <album> tags with the corresponding images
-    content = content.replace(/<album>(.*?)<\/album>/g, (match, argument) => {
+    content = content.replace(new RegExp(scheme[0] + '(.*?)' + scheme[1], 'g'), (match, argument) => {
       // if the album is in the images folder, return the image
       if (images.includes(argument)) return `<img src="./${config.images}/${argument}" alt="${argument}" />`;
       // get all images in the folder
